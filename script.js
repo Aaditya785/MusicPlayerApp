@@ -1,191 +1,222 @@
 let songsDetails = [
   {
-    title: "song name 1",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Heeriye",
+    artist_name: "Arjit Singh",
+    song_src: "./music/Heeriye.mp3",
+    thumbnail: "./img/heeriye.jpeg",
     playlist: "playlist 1",
     genre: "Bollywood",
   },
   {
-    title: "song name 2",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Closer",
+    artist_name: "The Chainsmokers",
+    song_src: "./music/closer.mp3",
+    thumbnail: "./img/closer.jpeg",
     playlist: "playlist 1",
     genre: "Hollywood",
   },
   {
-    title: "song name 3",
+    title: "Iktara",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Iktara Lofi.mp3",
+    thumbnail: "./img/iktara.jpg",
     playlist: "playlist 1",
     genre: "Lofi",
   },
   {
-    title: "song name 4",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Chal Bombay ",
+    artist_name: "Divine",
+    song_src: "./music/Chal Bombay rap.mp3",
+    thumbnail: "./img/chal bombay.jpg",
     playlist: "playlist 1",
     genre: "Rap",
   },
   {
-    title: "song name 5",
+    title: "Tere Vaaste",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Tere Vaaste.mp3",
+    thumbnail: "./img/tereVaaste.jpeg",
     playlist: "playlist 1",
     genre: "Bollywood",
   },
   {
-    title: "song name 6",
+    title: "Shape Of You",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Shape of you.mp3",
+    thumbnail: "./img/shape of you.jpeg",
     playlist: "playlist 1",
     genre: "Hollywood",
   },
   {
-    title: "song name 7",
+    title: "Sajdaa",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Sajdaa Lofi.mp3",
+    thumbnail: "./img/sajdaa.jpg",
     playlist: "playlist 1",
     genre: "Lofi",
   },
   {
-    title: "song name 8",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Dooriyan",
+    artist_name: "Dino James",
+    song_src: "./music/Dooriyan Rap.mp3",
+    thumbnail: "./img/dooriyan.jpg",
     playlist: "playlist 1",
     genre: "Rap",
   },
   {
-    title: "song name 9",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Kesariya",
+    artist_name: "Arjit Singh",
+    song_src: "./music/Kesariya.mp3",
+    thumbnail: "./img/kesariys.jpeg",
     playlist: "playlist 1",
     genre: "Bollywood",
   },
   {
-    title: "song name 10",
+    title: "Sugar n Brownies",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Sugar n Brownies.mp3",
+    thumbnail: "./img/sugar & brownies.jpeg",
     playlist: "playlist 1",
     genre: "Hollywood",
   },
   {
-    title: "song name 11",
+    title: "Jashn-E-Bahaaraa",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/JashnEBahaaraa Lofi.mp3",
+    thumbnail: "./img/jashneBahara.jpg",
     playlist: "playlist 1",
     genre: "Lofi",
   },
   {
-    title: "song name 12",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Interview",
+    artist_name: "Ikaa",
+    song_src: "./music/Interview rap.mp3",
+    thumbnail: "./img/interview.jpg",
     playlist: "playlist 1",
     genre: "Rap",
   },
   {
-    title: "song name 13",
+    title: "What Jhumka?..",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/What Jhumka.mp3",
+    thumbnail: "./img/whatJhumka.jpeg",
     playlist: "playlist 1",
     genre: "Bollywood",
   },
   {
-    title: "song name 14",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Thunder",
+    artist_name: "Imagine Dragons",
+    song_src: "./music/Thunder.mp3",
+    thumbnail: "./img/thunder.jpeg",
     playlist: "playlist 1",
     genre: "Hollywood",
   },
   {
-    title: "song name 15",
+    title: "Saibo",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Saibo.mp3",
+    thumbnail: "./img/saibo.jpg",
     playlist: "playlist 1",
     genre: "Lofi",
   },
   {
-    title: "song name 16",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Machayenge",
+    artist_name: "Emey Bantai",
+    song_src: "./music/MACHAYENGE rap.mp3",
+    thumbnail: "./img/machaiyenge.jpg",
     playlist: "playlist 1",
     genre: "Rap",
   },
   {
-    title: "song name 17",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "O Bedardeya",
+    artist_name: "Arjit Singh",
+    song_src: "./music/O Bedardeya.mp3",
+    thumbnail: "./img/obedardeya.jpeg",
     playlist: "playlist 1",
     genre: "Bollywood",
   },
   {
-    title: "song name 18",
+    title: "We Don't Talk Anymore",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/We Don't Talk Anymore.mp3",
+    thumbnail: "./img/we don't talk anymore.jpeg",
     playlist: "playlist 1",
     genre: "Hollywood",
   },
   {
-    title: "song name 19",
+    title: "Ranjha",
     artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    song_src: "./music/Ranjha LoFi.mp3",
+    thumbnail: "./img/ranjha.jpg",
     playlist: "playlist 1",
     genre: "Lofi",
   },
   {
-    title: "song name 20",
-    artist_name: "song artist name",
-    song_src: "https://songs.com",
-    thumbnail: "https://picsum.photos",
+    title: "Mirchi",
+    artist_name: "Divine",
+    song_src: "./music/mirchi rap.mp3",
+    thumbnail: "./img/mirchi.jpg",
     playlist: "playlist 1",
     genre: "Rap",
   },
 ];
 let option = document.querySelector("#filter");
-let song_list = document.querySelector('.song_list');
+let song_list = document.querySelector(".song_list");
+let song_card = document.querySelector(".song_card");
+let player = document.querySelector(".player");
 
-function startSongs() {
-    songsDetails.forEach((elem) => {
-        song_list.innerHTML += `
-      <div class="song">${elem.title}</div>`
-    })
+
+
+function startSongs(songsDetails) {
+  songsDetails.forEach((elem) => {
+    const songElement = document.createElement("div");
+    songElement.classList.add("song");
+    songElement.innerHTML = ` `;
+    songElement.innerHTML = `<i class="ri-disc-line"></i> ${elem.title}`;
+    songElement.addEventListener("click", () => displaySong(elem));
+    song_list.appendChild(songElement);
+  });
+  let randSong = Math.floor(Math.random() * 20);
+  displaySong(songsDetails[randSong]);
 }
-startSongs();
+
+startSongs(songsDetails);
 
 function selectOption() {
   let songType = option.value;
-    song_list.innerHTML = ``;
-  if (songType != "All") {
-    songsDetails.forEach((elem) => {
-        if (elem.genre == songType) {
-        song_list.innerHTML += `
-        <div class="song">${elem.title}</div>`
-      }
-    });
-    }
-  else {
-      songsDetails.forEach((elem) => {
-          song_list.innerHTML += `
-        <div class="song">${elem.title}</div>`
-      })
-    }
+  song_list.innerHTML = "";
+
+  if (songType !== "All") {
+    let newSongsDetails = songsDetails.filter(
+      (elem) => elem.genre === songType
+    );
+    startSongs(newSongsDetails);
+  } else {
+    startSongs(songsDetails);
+  }
+}
+
+function displaySong(elem) {
+  song_card.innerHTML = `
+  <div class="song_img">
+                    <img src="${elem.thumbnail}" alt="">
+                </div>
+                <div class="song_title">${elem.title}</div>
+                <div class="song_artist">${elem.artist_name}</div>
+  `;
+  player.innerHTML = `
+  <audio src="${elem.song_src}" controls></audio>
+  `
+}
+
+function prevSong() {
+  
+}
+
+function nextSong() {
+  
+}
+
+function addPlaylist() {
+  
 }
