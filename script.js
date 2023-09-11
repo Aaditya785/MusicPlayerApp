@@ -164,20 +164,23 @@ let option = document.querySelector("#filter");
 let song_list = document.querySelector(".song_list");
 let song_card = document.querySelector(".song_card");
 let player = document.querySelector(".player");
+let player_ctrl = document.querySelector(".player_ctrl");
+let song_display = document.querySelector(".song_display");
+var prev, next, LIndex, LElem;
 
-
+let randSong = Math.floor(Math.random() * 20);
+displaySong(songsDetails[randSong]);
 
 function startSongs(songsDetails) {
-  songsDetails.forEach((elem) => {
+  songsDetails.forEach((elem, i) => {
+    LElem = elem;
     const songElement = document.createElement("div");
     songElement.classList.add("song");
     songElement.innerHTML = ` `;
     songElement.innerHTML = `<i class="ri-disc-line"></i> ${elem.title}`;
-    songElement.addEventListener("click", () => displaySong(elem));
+    songElement.addEventListener("click", () => displaySong(elem, i));
     song_list.appendChild(songElement);
   });
-  let randSong = Math.floor(Math.random() * 20);
-  displaySong(songsDetails[randSong]);
 }
 
 startSongs(songsDetails);
@@ -196,7 +199,7 @@ function selectOption() {
   }
 }
 
-function displaySong(elem) {
+function displaySong(elem, index) {
   song_card.innerHTML = `
   <div class="song_img">
                     <img src="${elem.thumbnail}" alt="">
@@ -206,17 +209,32 @@ function displaySong(elem) {
   `;
   player.innerHTML = `
   <audio src="${elem.song_src}" controls></audio>
-  `
+  `;
+  prev = index - 1;
+  next = index + 1;
+  // prevSong(prev);
+  // nextSong(next);
+  //  player ctrl btn -->  onclick(prev) for <=  && onclick(next) for =>.
+  // Create the parent element
+  
+
+}
+function leftPrint() {
+  if (prev < 0) {
+    prev = songsDetails.length - 1;
+    next = 1;
+  }
+  // alert("The left is : " + songsDetails[prev].title);
+  displaySong(songsDetails[prev], prev);
+}
+function rightPrint() {
+  if (next > songsDetails.length - 1) {
+    prev = songsDetails.length - 1;
+    next = 0;
+  }
+  // alert("The right is : " + songsDetails[next].title);
+  displaySong(songsDetails[next], next);
 }
 
-function prevSong() {
-  
-}
 
-function nextSong() {
-  
-}
-
-function addPlaylist() {
-  
-}
+function addPlaylist() {}
