@@ -10,13 +10,11 @@
 </head>
 
 <body>
-    <div class="hide">
-        <h1>Only For device above 600px width</h1>
-    </div>
     <header>
         <h1>Music Player App.</h1>
+        <button class="toggle" onclick="toggleMode()">Dark</button>
     </header>
-    <section>
+    <section style="height: 100vh;">
         <div class="songs">
             <div class="filter">
                 <label for="filter">Filter for Genre: &nbsp;</label>
@@ -53,8 +51,8 @@
             </div>
         </div>
         <div class="playlist_box">
-            <input type="text" placeholder="Enter playlist name">
-            <button>Create Playlist</button>
+            <input class="playlist_name" type="text" placeholder="Enter playlist name">
+            <button onclick="addPlaylist()">Create Playlist</button>
             <div class="playlist">
                 <h2>Current Playlist</h2>
                 <div class="current_playlist">

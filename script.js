@@ -160,16 +160,22 @@ let songsDetails = [
     genre: "Rap",
   },
 ];
+let header = document.querySelector("header");
+let toggle = document.querySelector(".toggle");
 let option = document.querySelector("#filter");
 let song_list = document.querySelector(".song_list");
 let song_card = document.querySelector(".song_card");
 let player = document.querySelector(".player");
 let player_ctrl = document.querySelector(".player_ctrl");
 let song_display = document.querySelector(".song_display");
+let all_playlist = document.querySelector(".all_playlist");
+let newSongsDetails = songsDetails;
 var prev, next, LIndex, LElem;
 
 let randSong = Math.floor(Math.random() * 20);
-displaySong(songsDetails[randSong]);
+displaySong(songsDetails[randSong], randSong);
+
+
 
 function startSongs(songsDetails) {
   songsDetails.forEach((elem, i) => {
@@ -190,12 +196,13 @@ function selectOption() {
   song_list.innerHTML = "";
 
   if (songType !== "All") {
-    let newSongsDetails = songsDetails.filter(
+     newSongsDetails = songsDetails.filter(
       (elem) => elem.genre === songType
     );
     startSongs(newSongsDetails);
   } else {
-    startSongs(songsDetails);
+    newSongsDetails = songsDetails;
+    startSongs(newSongsDetails);
   }
 }
 
@@ -208,7 +215,7 @@ function displaySong(elem, index) {
                 <div class="song_artist">${elem.artist_name}</div>
   `;
   player.innerHTML = `
-  <audio src="${elem.song_src}" controls></audio>
+  <audio src="${elem.song_src}" controls loop></audio>
   `;
   prev = index - 1;
   next = index + 1;
@@ -219,22 +226,62 @@ function displaySong(elem, index) {
   
 
 }
+
 function leftPrint() {
   if (prev < 0) {
-    prev = songsDetails.length - 1;
+    prev = newSongsDetails.length - 1;
     next = 1;
   }
   // alert("The left is : " + songsDetails[prev].title);
-  displaySong(songsDetails[prev], prev);
+  displaySong(newSongsDetails[prev], prev);
 }
+
 function rightPrint() {
-  if (next > songsDetails.length - 1) {
-    prev = songsDetails.length - 1;
+  if (next > newSongsDetails.length - 1) {
+    prev = newSongsDetails.length - 1;
     next = 0;
   }
   // alert("The right is : " + songsDetails[next].title);
-  displaySong(songsDetails[next], next);
+  displaySong(newSongsDetails[next], next);
 }
 
+// mode = "off";
+localStorage.setItem("color", "black");
+function toggleMode() {
+  if (localStorage.getItem("color") == "black") {
+    header.style.backgroundColor = localStorage.getItem("color");
+    localStorage.setItem("color", "grey");
+    // alert(localStorage.getItem("color"));
+    toggle.textContent = "Light"
+  }
+  else if (localStorage.getItem("color") == "grey") {
+    header.style.backgroundColor = localStorage.getItem("color");
+    localStorage.setItem("color", "black");
+    toggle.textContent = "Dark"
+  }
+}
 
-function addPlaylist() {}
+let playlist_name = document.querySelector(".playlist_name");
+
+
+function addPlaylist() {
+  var buttons = document.querySelectorAll('.all_playlist button');
+  var playlistName = playlist_name.value;
+  console.log(buttons)
+
+  if (!playlistName) {
+    alert("Enter The name");
+    return;
+  }
+
+  // Check if the playlistName already exists
+  for (let i = 0; i < buttons.length; i++) {
+    if (buttons[i].textContent === playlistName) {
+      alert("Playlist already exists!");
+      return;
+    }
+  }
+
+  // If the playlistName doesn't exist, add the new button
+  all_playlist.innerHTML += `<button>${playlistName}</button>`;
+}

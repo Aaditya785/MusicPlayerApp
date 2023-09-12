@@ -24,7 +24,19 @@ header h1 {
   height: 100%;
   margin: 0 10px;
   border-radius: 0 0 10px 10px;
+  display: inline;
 }
+
+.toggle{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0px 10px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+
 
 section {
   height: 90%;
@@ -156,14 +168,22 @@ audio {
   margin: 5px;
 }
 @media (max-width: 600px) {
-  header,
-  section {
+  header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .songs{
     display: none;
   }
-  .hide {
-    border: 1px solid;
+  .song_display{
     display: block;
-    width: 50%;
-    position: absolute;
+    width: 100%;
+  }
+  .playlist_box{
+    display: none;
+  }
+  body{
+    overflow: hidden;
   }
 }
